@@ -163,7 +163,7 @@ const PageContent = () => {
 
 const Page = () => {
     return (
-        <Suspense fallback={<div className="text-white">Chargement...</div>}>
+        <Suspense fallback={<Skeleton></Skeleton>}>
             <PageContent />
         </Suspense>
     );

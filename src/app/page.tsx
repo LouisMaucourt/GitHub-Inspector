@@ -2,6 +2,7 @@
 import { useState, FormEvent, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Skeleton from './components/Skeleton';
 
 type GitHubUser = {
   id: number;
@@ -197,7 +198,7 @@ function SearchComponent() {
 export default function Home() {
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Skeleton></Skeleton>}>
         <SearchComponent />
       </Suspense>
     </div>
